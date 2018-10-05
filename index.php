@@ -1,3 +1,10 @@
+<?php 
+      
+    require('steamauth/steamauth.php');
+    require('steamauth/userInfo.php');
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en" ng-app="dota2base">
 <head>
@@ -8,10 +15,52 @@
 </head>
 <body ng-controller="Dota2BaseController">
 
+
+
+
+
 <div class="jumbotron">
+
+    
+    <?if(isset($_SESSION['steamid'])){
+        var_dump($_SESSION);
+        // echo $steamprofile['steamid'];
+        echo '<a href="steamauth/logout.php">LogOut</a>';
+        }
+        else{
+            loginbutton();
+        }
+        
+        
+        
+        $id = $steamprofile['steamid'];
+    
+        
+        
+        $subid = substr($id, 4); // because calculators are fags
+        // echo $subid;
+        $steamY = $subid;
+        $steamY = $steamY - 1197960265728;
+        $steamX = 0;
+        if ($steamY%2 == 1){
+        $steamX = 1;
+        } else {
+        $steamX = 0;
+        }
+        
+        $steamY = (($steamY - $steamX) / 2 );
+        $steamID = "STEAM_0:" . (string)$steamX . ":" . (string)$steamY;
+        $steamY = $subid - 1197960265728;
+        $steamID3 = (string)$steamY;
+        // echo $steamID;
+        // echo $steamID3;
+    ?>
+        
+        
 	<h1>Hello, It's a Dota 2 Statistic </h1><img src="assets/dota2logo/logo.png" alt="Logo" title="logo" />
-	<input type="text" id="account_id"  minlength="9" maxlength="9" />
-	<input type="submit" ng-click="enterId()" />
+    
+	<!-- <input type="text" id="account_id"  minlength="9" maxlength="9" />
+	<input type="submit" ng-click="enterId()" /> -->
 		<h3> {{data.profile.personaname}}</h3>
 		<img src={{data.profile.avatarfull}} alt="avatar" style="width: 80px; height: 80px; border-radius: 50%" />
 
@@ -59,7 +108,10 @@
 	</table>
 </div>
 
-
+<script>
+    var account_id = '<?=$steamID3?>';
+    console.log(account_id);
+</script>
 
 
 
@@ -71,4 +123,4 @@
 <script src="js/angular-route.min.js"></script>
 <script src="js/main.js"></script>	
 </body>
-</html>
+</html>			

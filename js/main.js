@@ -3,13 +3,13 @@ var dota2base = angular.module('dota2base', ['ngRoute']);
 dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, $scope){
 	
 	
-	$scope.enterId = function (){
-		$scope.input = document.getElementById('account_id').value
+// $scope.enterId = function (){
+// 	$scope.input = $('#account_id').val()
 	$http({
 		method : 'GET',
-		url : 'https://api.opendota.com/api/players/' + $scope.input + '/',
+		url : 'https://api.opendota.com/api/players/' + account_id + '/',
 		params: {
-			'api_key' : '69B492013F129DACE0A69324CBCA87C1'
+			'api_key' : '0206A0087C3C2F607ADC9203CF7F9350'
 		}
 	}).then(function success(response){
 
@@ -23,17 +23,26 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 		alert('Bad request!');
 	})
 
+	$http({
+		method: 'GET',
+		url : 'https://api.opendota.com/api/players/' + account_id
+	}).then(function(rankings){
+		console.log(rankings);
+	}, function(rankings){
+
+	})
+
 
 	$http({
 		method: 'GET',
-		url: 'https://api.opendota.com/api/players/' + $scope.input +'/recentmatches',
+		url: 'https://api.opendota.com/api/players/' + account_id +'/recentmatches',
 		params: {
-			'api_key': '69B492013F129DACE0A69324CBCA87C1',
+			'api_key': '0206A0087C3C2F607ADC9203CF7F9350',
 			'limit' : 10
 		}
 	}).then(function success(response){
 		$scope.matches = response.data;
-		// console.log($scope.matches);
+		console.log($scope.matches);
 		for (let i = 0; i < response.data.length; i++){
 			$scope.matches[i].duration = Math.ceil($scope.matches[i].duration / 60) + ':' + Math.ceil($scope.matches[i].duration % 60);
 			if ($scope.matches[i].game_mode == '0') {
@@ -104,9 +113,9 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 			}
 			$http({
 				method: 'GET',
-				url: 'https://api.opendota.com/api/players/' + $scope.input + '/heroes',
+				url: 'https://api.opendota.com/api/players/' + account_id + '/heroes',
 				params: {
-					'api_key': '69B492013F129DACE0A69324CBCA87C1'
+					'api_key': '0206A0087C3C2F607ADC9203CF7F9350'
 				}
 			}).then(function(bestHeroes){
 				$scope.bestHero = bestHeroes.data;
@@ -136,7 +145,7 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 	})
 }
 	
-	}
+	// }
 ])
 
 
