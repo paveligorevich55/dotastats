@@ -1,6 +1,6 @@
 <?php
 //Version 4.0
-$steamauth['apikey'] = "0206A0087C3C2F607ADC9203CF7F9350"; // Your Steam WebAPI-Key found at https://steamcommunity.com/dev/apikey
+$steamauth['apikey'] = "706700BD62A6A2A65A14C30E3D1A7260"; // Your Steam WebAPI-Key found at https://steamcommunity.com/dev/apikey
 $steamauth['domainname'] = "dota2statts.zzz.com.ua/"; // The main URL of your website displayed in the login page
 $steamauth['logoutpage'] = ""; // Page to redirect to after a successfull logout (from the directory the SteamAuth-folder is located in) - NO slash at the beginning!
 $steamauth['loginpage'] = ""; // Page to redirect to after a successfull login (from the directory the SteamAuth-folder is located in) - NO slash at the beginning!

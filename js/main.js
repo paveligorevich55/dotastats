@@ -9,7 +9,7 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 		method : 'GET',
 		url : 'https://api.opendota.com/api/players/' + account_id + '/',
 		params: {
-			'api_key' : '0206A0087C3C2F607ADC9203CF7F9350'
+			'api_key' : '706700BD62A6A2A65A14C30E3D1A7260'
 		}
 	}).then(function success(response){
 
@@ -37,7 +37,7 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 		method: 'GET',
 		url: 'https://api.opendota.com/api/players/' + account_id +'/recentmatches',
 		params: {
-			'api_key': '0206A0087C3C2F607ADC9203CF7F9350',
+			'api_key': '706700BD62A6A2A65A14C30E3D1A7260',
 			'limit' : 10
 		}
 	}).then(function success(response){
@@ -115,7 +115,7 @@ dota2base.controller('Dota2BaseController', ['$http', '$scope', function($http, 
 				method: 'GET',
 				url: 'https://api.opendota.com/api/players/' + account_id + '/heroes',
 				params: {
-					'api_key': '0206A0087C3C2F607ADC9203CF7F9350'
+					'api_key': '706700BD62A6A2A65A14C30E3D1A7260'
 				}
 			}).then(function(bestHeroes){
 				$scope.bestHero = bestHeroes.data;
