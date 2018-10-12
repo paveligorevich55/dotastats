@@ -68,7 +68,8 @@ function loginbutton($buttonstyle = "square") {
 	$button['rectangle'] = "01";
 	$button['square'] = "02";
 	// $button = "<a href='?login'><img src='https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_".$button[$buttonstyle].".png'></a>";
-	$button = "<a href='?login' class='main_header_login_link'><img src='login.png'></a>";
+	// $button = "<a href='?login' class='main_header_login_link'><img src='login.png'></a>";
+	$button = "<form class='form-inline login-form'><i class='fab fa-steam-square fa-lg'></i><button type='submit'>LogIn</button></form>";
 	
 	echo $button;
 }

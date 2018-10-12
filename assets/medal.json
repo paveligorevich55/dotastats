@@ -1,0 +1,209 @@
+{
+  "ranks": [
+    {
+      "id": 11,
+      "name": "Herald 1",
+      "image": "../assets/medals/180px-SeasonalRank1-1.png"
+    },
+    {
+      "id": 12,
+      "name": "Herald 2",
+      "image": "../assets/medals/180px-SeasonalRank1-2.png"
+    },
+    {
+      "id": 13,
+      "name": "Herald 3",
+      "image": "../assets/medals/180px-SeasonalRank1-3.png"
+    },
+    {
+      "id": 14,
+      "name": "Herald 4",
+      "image": "../assets/medals/180px-SeasonalRank1-4.png"
+    },
+    {
+      "id": 15,
+      "name": "Herald 5",
+      "image": "../assets/medals/180px-SeasonalRank1-5.png"
+    },
+    {
+      "id": 21,
+      "name": "Guardian 1",
+      "image": "../assets/medals/180px-SeasonalRank2-1.png"
+    },
+    {
+      "id": 22,
+      "name": "Guardian 2",
+      "image": "../assets/medals/180px-SeasonalRank2-2.png"
+    },
+    {
+      "id": 23,
+      "name": "Guardian 3",
+      "image": "../assets/medals/180px-SeasonalRank2-3.png"
+    },
+    {
+      "id": 24,
+      "name": "Guardian 4",
+      "image": "../assets/medals/180px-SeasonalRank2-4.png"
+    },
+    {
+      "id": 25,
+      "name": "Guardian 5",
+      "image": "../assets/medals/180px-SeasonalRank2-5.png"
+    },
+    {
+      "id": 31,
+      "name": "Crusader 1",
+      "image": "../assets/medals/180px-SeasonalRank3-1.png"
+    },
+    {
+      "id": 32,
+      "name": "Crusader 2",
+      "image": "../assets/medals/180px-SeasonalRank3-2.png"
+    },
+    {
+      "id": 33,
+      "name": "Crusader 3",
+      "image": "../assets/medals/180px-SeasonalRank3-3.png"
+    },
+    {
+      "id": 34,
+      "name": "Crusader 4",
+      "image": "../assets/medals/180px-SeasonalRank3-4.png"
+    },
+    {
+      "id": 35,
+      "name": "Crusader 5",
+      "image": "../assets/medals/180px-SeasonalRank3-5.png"
+    },
+    {
+      "id": 41,
+      "name": "Archon 1",
+      "image": "../assets/medals/180px-SeasonalRank4-1.png"
+    },
+    {
+      "id": 42,
+      "name": "Archon 2",
+      "image": "../assets/medals/180px-SeasonalRank4-2.png"
+    },
+    {
+      "id": 43,
+      "name": "Archon 3",
+      "image": "../assets/medals/180px-SeasonalRank4-3.png"
+    },
+    {
+      "id": 44,
+      "name": "Archon 4",
+      "image": "../assets/medals/180px-SeasonalRank4-4.png"
+    },
+    {
+      "id": 45,
+      "name": "Archon 5",
+      "image": "../assets/medals/180px-SeasonalRank4-5.png"
+    },
+    {
+      "id": 51,
+      "name": "Legend 1",
+      "image": "../assets/medals/180px-SeasonalRank5-1.png"
+    },
+    {
+      "id": 52,
+      "name": "Legend 2",
+      "image": "../assets/medals/180px-SeasonalRank5-2.png"
+    },
+    {
+      "id": 53,
+      "name": "Legend 3",
+      "image": "../assets/medals/180px-SeasonalRank5-3.png"
+    },
+    {
+      "id": 54,
+      "name": "Legend 4",
+      "image": "../assets/medals/180px-SeasonalRank5-4.png"
+    },
+    {
+      "id": 55,
+      "name": "Legend 5",
+      "image": "../assets/medals/180px-SeasonalRank5-5.png"
+    },
+    {
+      "id": 61,
+      "name": "Ancient 1",
+      "image": "../assets/medals/180px-SeasonalRank6-1.png"
+    },
+    {
+      "id": 62,
+      "name": "Ancient 2",
+      "image": "../assets/medals/180px-SeasonalRank6-2.png"
+    },
+    {
+      "id": 63,
+      "name": "Ancient 3",
+      "image": "../assets/medals/180px-SeasonalRank6-3.png"
+    },
+    {
+      "id": 64,
+      "name": "Ancient 4",
+      "image": "../assets/medals/180px-SeasonalRank6-4.png"
+    },
+    {
+      "id": 65,
+      "name": "Ancient 5",
+      "image": "../assets/medals/180px-SeasonalRank6-5.png"
+    },
+    {
+      "id": 71,
+      "name": "Divine 1",
+      "image": "../assets/medals/180px-SeasonalRank7-1.png"
+    },
+    {
+      "id": 72,
+      "name": "Divine 2",
+      "image": "../assets/medals/180px-SeasonalRank7-2.png"
+    },
+    {
+      "id": 73,
+      "name": "Divine 3",
+      "image": "../assets/medals/180px-SeasonalRank7-3.png"
+    },
+    {
+      "id": 74,
+      "name": "Divine 4",
+      "image": "../assets/medals/180px-SeasonalRank7-4.png"
+    },
+    {
+      "id": 75,
+      "name": "Divine 5",
+      "image": "../assets/medals/180px-SeasonalRank7-5.png"
+    },
+    {
+      "id": 81,
+      "name": "Immortal 0",
+      "image": "../assets/medals/180px-SeasonalRankTop0.png"
+    },
+    {
+      "id": 82,
+      "name": "Immortal Top 1000",
+      "image": "../assets/medals/180px-SeasonalRankTop1.png"
+    },
+    {
+      "id": 83,
+      "name": "Immortal Top 100",
+      "image": "../assets/medals/180px-SeasonalRankTop2.png"
+    },
+    {
+      "id": 84,
+      "name": "Immortal Top 10",
+      "image": "../assets/medals/180px-SeasonalRankTop3.png"
+    },
+    {
+      "id": 85,
+      "name": "Immortal Top 1",
+      "image": "../assets/medals/180px-SeasonalRankTop4.png"
+    },
+    {
+      "id": null,
+      "name": "Unknow",
+      "image": "../assets/medals/230px-SeasonalRank0-0.png"
+    }
+  ]
+}

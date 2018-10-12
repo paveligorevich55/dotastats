@@ -1,0 +1,247 @@
+<link rel="stylesheet" href="app/components/profile-page/profile-page.style.css">
+<body>
+  <header>
+      <nav class="menu">
+        <div class="menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu__links">
+            <a class="menu__links-item" href="/"><big>< dota2stats /></big></a>
+            <a class="menu__links-item" href="#!/profile">PROFILE</a>
+          <a class="menu__links-item" href="/">CONTACTS</a>
+          <a class="menu__links-item" href="/">ABOUT US</a>
+          <form class="form-inline search-bar">
+            <i class="far fa-search fa-lg" style="color: grey;"></i>
+            <input type="text" placeholder="Search accountid, nick . . ." aria-label="Search">
+          </form>
+          <form class="form-inline login-form">
+            <i class="fab fa-steam-square fa-lg"></i>
+            <button type="submit">LogIn</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+  <div class="container main-content" id="main">
+    <div class="full-profile-content">
+      <div class="profile-content">
+        <div class="profile-photo">
+          <img src="{{data.profile.avatarfull}}" alt="profile-logo"/>
+        </div>
+        <div class="profile-information">
+          <div class="titleName">
+            <span>{{data.profile.personaname}}</span>
+            <div class="links">
+              <div class="steam-icon mx-2">
+                <a href="#">
+                  <svg viewBox="0 0 110 110" style="fill: grey; width: 15px; height: 15px;">
+                    <path d="M55,0C25.881,0,2.062,22.634,0.14,51.267l28.525,11.507C31.172,61.029,34.214,60,37.5,60 c0.706,0,1.396,0.063,2.076,0.155l13.426-19.691C53.021,29.159,62.19,20,73.5,20C84.822,20,94,29.178,94,40.5S84.822,61,73.5,61 c-0.01,0-0.021-0.001-0.031-0.001L52.944,74.385C52.97,74.754,53,75.124,53,75.5C53,84.061,46.061,91,37.5,91 c-7.565,0-13.855-5.422-15.218-12.591L2.118,70.107C8.685,93.134,29.866,110,55,110c30.376,0,55-24.624,55-55 C110,24.625,85.376,0,55,0z M37.5,84c-0.915,0-1.795-0.148-2.621-0.416l-0.004,0.01l-0.252-0.104 c-0.243-0.087-0.48-0.185-0.712-0.293l-6.805-2.801C28.945,84.295,32.902,87,37.5,87C43.851,87,49,81.852,49,75.5 S43.851,64,37.5,64c-1.406,0-2.747,0.265-3.993,0.727l7.2,2.904c0.05,0.021,0.1,0.039,0.149,0.061l0.56,0.226l-0.015,0.037 C44.131,69.368,46,72.213,46,75.5C46,80.194,42.194,84,37.5,84z M88,40.5C88,32.492,81.508,26,73.5,26S59,32.492,59,40.5 S65.492,55,73.5,55S88,48.508,88,40.5z M63,40.5C63,34.701,67.701,30,73.5,30S84,34.701,84,40.5S79.299,51,73.5,51 S63,46.299,63,40.5z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <div class="eye-green">
+                <a href="#">
+                  <svg class="iconEyeTracked" viewBox="0 0 300 300" style="width: 40px; height: 25px; fill: rgb(102, 187, 106)">
+                    <path d="M299.3,150.2C263.9,109.4,215,62.5,150,62.5c-26.3,0-50.3,7.4-75.7,23.3c-21.4,13.4-43.4,32.3-73.5,63.4L0,150 l5.2,5.4c43,44.1,80.2,82.1,144.8,82.1c28.5,0,56.2-9.3,84.5-28.4c24.1-16.3,44.7-37,61.2-53.8l4.3-4.3L299.3,150.2z M150,212.5 c-34.5,0-62.5-28-62.5-62.5s28-62.5,62.5-62.5s62.5,28,62.5,62.5S184.5,212.5,150,212.5z"></path>
+                    <path d="M145.6,127.2c0-5.4,1.6-10.5,4.3-14.7c-20.7,0-37.4,16.9-37.4,37.7s16.8,37.6,37.4,37.6s37.5-16.8,37.5-37.6 l0,0c-4.2,2.7-9.3,4.3-14.7,4.3C157.8,154.4,145.6,142.2,145.6,127.2z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="player-content-stats">
+            <div class="container">
+              <div class="block-wins mt-2 mr-3">
+                <span>Wins</span>
+                <div class="textSuccess">{{stats.win}}</div>
+              </div>
+              <div class="block-loses mt-2 mr-3">
+                <span>Loses</span>
+                <div class="textFailed">{{stats.lose}}</div>
+              </div>
+              <div class="block-winrate mt-2 mr-3">
+                <span>WinRate</span>
+                <div class="textRate">{{winrate | limitTo: 5}}%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rankTier">
+          <img src="{{rank}}" alt="rank_img">
+        </div>
+      </div>
+      <section id="function" class="function-list">
+        <div class="function-content">
+          <a class="chosen" href="#"><div class="toolTip">Overview</div></a>
+          <a href="#"><div class="toolTip">Matches</div></a>
+          <a href="#"><div class="toolTip">Heroes</div></a>
+          <a href="#"><div class="toolTip">Peers</div></a>
+          <a href="#"><div class="toolTip">Pros</div></a>
+          <a href="#"><div class="toolTip">Records</div></a>
+          <a href="#"><div class="toolTip">Totals</div></a>
+          <a href="#"><div class="toolTip">Counts</div></a>
+          <a href="#"><div class="toolTip">Histograms</div></a>
+          <a href="#"><div class="toolTip">Trends</div></a>
+          <a href="#"><div class="toolTip">Wardmap</div></a>
+          <a href="#"><div class="toolTip">Worldcloud</div></a>
+          <a href="#"><div class="toolTip">MMR</div></a>
+          <a href="#"><div class="toolTip">Rankings</div></a>
+        </div>
+      </section>
+      <div class="stats-account">
+        <div class="col-lg-7 recent-matches">
+          <div>
+            <div class="title-recent-matches">
+              <span class="title" style="font-size: 20px;">
+                <svg viewBox="0 0 24 24" style="display: inline-block; color: rgb(245, 245, 245); fill: currentcolor; height: 24px; width: 24px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+                  <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"></path>
+                </svg>
+                <a href="#">Recent Matches</a>
+              </span>
+            </div>
+            <div class="table-recent-matches d-block">
+              <div>
+                <div class="innerContainer undefined false">
+                  <div style="height: auto; overflow: auto;">
+                    <div style="height: inherit; overflow-x: hidden; overflow-y: auto;">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th class="one" style="width: 35%; padding-left: 15px;">hero</th>
+                            <th class="two" style="width: 15%;">result</th>
+                            <th class="three" style="width: 17%;">game mode</th>
+                            <th class="four" style="width: 15%;">duration</th>
+                            <th class="five" style="width: 6%;">k</th>
+                            <th class="six" style="width: 6%;">d</th>
+                            <th class="seven" style="width: 6%;">a</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr ng-repeat="item in matches | limitTo: 12">
+                            <td style="display: flex; flex-direction: row; padding-left: 15px;">
+                              <div style="align-self: center;">
+                                <img src="{{item.url}}" alt="hero_logo" style="width: 60px; height: 30px;">
+                              </div>
+                              <div style="display: flex; flex-direction: column; padding-left: 5px;">
+                                <span style="font-size: 15px">{{item.hero_name}}</span>
+                                <span style=" opacity: .5; font-size: 12px;">{{item.moment_ago}}</span>
+                              </div>
+                            </td>
+                            <td style="font-size: 15px;">
+                              <div><span class="span-winlose">{{item.result}}</span></div>
+                              <div><span style="font-size: 12px; opacity: .5;">{{item.game_mode | other}}</span></div>
+                            </td>
+                            <td style="font-size: 15px;">
+                              <div><span>{{item.game_mode | firstWord}}</span></div>
+                              <div><span style="font-size: 12px; opacity: .5;">{{item.skill}}</span></div>
+                            </td>
+                            <td style="font-size: 15px;">
+                              <div><span>{{item.duration_time}}</span></div>
+                              <div><span style="font-size: 12px; opacity: .5;">{{item.team}}</span></div>
+                            </td>
+                            <td style="font-size: 15px;">{{item.kills}}</td>
+                            <td style="font-size: 15px;">{{item.deaths}}</td>
+                            <td style="font-size: 15px;">{{item.assists}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="col-lg-4 side-bar-statistic">
+          <div class="PlayersPlayedWith">
+            <div>
+              <div class="titlePlayersPlayedWith">
+                <span class="title" style="font-size: 20px">
+                  <svg viewBox="0 0 24 24" style="display: inline-block; color: rgb(245, 245, 245); fill: currentcolor; height: 24px; width: 24px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+                    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"></path>
+                  </svg>
+                  <a href="/players/131389547/peers">Players Played With</a>
+                </span>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 65%;text-align: left;">PLAYER</th>
+                    <th style="width: 13%;text-align: left;">MP</th>
+                    <th style="width: 22%;text-align: left;">WIN WITH %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="item in profilepeer | limitTo: 5 | orderBy: '-with_games'">
+                    <td style="display: flex; flex-direction: row; padding-left: 10px;">
+                      <div style="align-self: center;">
+                        <img src="{{item.avatarfull}}" alt="profile-peer-logo" style="width: 35px;height: 35px;">
+                      </div>
+                      <div style="display: flex; flex-direction: column; margin-left: 5px">
+                        <span style="font-size: 15px">{{item.personaname}}</span>
+                        <span style=" opacity: .5; font-size: 12px;">{{item.moment_ago}}</span>
+                      </div>
+                    </td> 
+                    <td style="font-size: 15px;">{{item.with_games}}</td>
+                    <td style="font-size: 15px; text-align: center;">{{item.win_rate_peer | limitTo: 5}}%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="HeroesPlayed">
+            <div>
+              <div class="titlePlayersPlayedWith">
+                <span class="title" style="font-size: 20px">
+                  <svg viewBox="0 0 24 24" style="display: inline-block; color: rgb(245, 245, 245); fill: currentcolor; height: 24px; width: 24px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;">
+                    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"></path>
+                  </svg>
+                  <a href="/players/131389547/peers">Heroes Played</a>
+                </span>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 65%;text-align: left;">Hero</th>
+                    <th style="width: 13%;text-align: left;">MP</th>
+                    <th style="width: 22%;text-align: left;">WIN WITH %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="item in bestHero | orderBy: '-win' | limitTo: 5">
+                    <td style="display: flex; flex-direction: row; padding-left: 10px;">
+                      <div style="align-self: center;">
+                        <img src="{{item.url}}" alt="#" style="width: 60px;height: 30px;">
+                      </div>
+                      <div style="display: flex; flex-direction: column; margin-left: 5px">
+                        <span style="font-size: 15px">{{item.hero_name}}</span>
+                        <span style=" opacity: .5; font-size: 12px;">{{item.moment_ago}}</span>
+                      </div>
+                    </td> 
+                    <td style="font-size: 15px;">{{item.games}}</td>
+                    <td style="font-size: 15px;text-align: center;">{{item.win_rate | limitTo: 5}}%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact" class="contact-section">
+      <div class="container text-center">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-content">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
+            </p>
+          </div>
+          <a class="btn btn-cta btn-primary" href="#">Get in Touch</a>
+      </div>
+  </section>
+</body>
